@@ -3,23 +3,23 @@
 </p>
 
 <p align="center">
-  <a href="https://github.com/KKKKhazix/human-writing/releases/tag/v1.1.0"><img alt="Version 1.1.0" src="https://img.shields.io/badge/version-1.1.0-C4473A?style=flat-square"></a>
+  <a href="https://github.com/pjj1234/human-writing/releases/tag/fork-1"><img alt="Version 1.1.0 fork-1" src="https://img.shields.io/badge/version-1.1.0_fork--1-C4473A?style=flat-square"></a>
   <a href="./LICENSE"><img alt="MIT License" src="https://img.shields.io/badge/license-MIT-313131?style=flat-square"></a>
-  <a href="https://github.com/KKKKhazix/human-writing/releases/latest"><img alt="GitHub Release" src="https://img.shields.io/github/v/release/KKKKhazix/human-writing?style=flat-square&color=6B6258"></a>
+  <a href="https://github.com/pjj1234/human-writing/releases/latest"><img alt="GitHub Release" src="https://img.shields.io/github/v/release/pjj1234/human-writing?style=flat-square&color=6B6258"></a>
 </p>
 
 <p align="center">
   <a href="#快速安装">快速安装</a> ·
   <a href="#它做什么">写作流程</a> ·
   <a href="#仓库结构">仓库结构</a> ·
-  <a href="https://github.com/KKKKhazix/human-writing/issues">提交问题</a>
+  <a href="https://github.com/pjj1234/human-writing/issues">提交问题</a>
 </p>
 
 > AI 写中文有个通病：读完觉得挺流畅，但说不出是谁写的。活人感写作想治的就是这件事。
 
 让模型写出来的文章读起来像一个具体的人在说话——知道一些事，有判断，偶尔岔开一句，还能接回来。适用于知乎回答、公众号文章、博客、论坛帖、人物故事、科普、评测、小说、口播等大多数中文写作场景。
 
-> **这是个人 fork。** 上游是 [KKKKhazix/human-writing](https://github.com/KKKKhazix/human-writing)。本副本只做中文自用改造，改造内容见 [CHANGELOG.md](./CHANGELOG.md) 和 [`references/adapted-from-humanizer.md`](./human-writing/references/adapted-from-humanizer.md)。装上游请走原仓库。
+> **本仓库既是 fork，也是安装来源。** 上游是 [KKKKhazix/human-writing](https://github.com/KKKKhazix/human-writing)（作者数字生命卡兹克，MIT 许可）。本副本在上游 1.1.0 的基础上做了中文自用改造，安装和更新都直接走本仓库，不需要再回原仓库。改造内容见 [CHANGELOG.md](./CHANGELOG.md) 与 [`references/adapted-from-humanizer.md`](./human-writing/references/adapted-from-humanizer.md)。
 
 ## 它做什么
 
@@ -35,12 +35,24 @@
 
 初稿写完还有一道关。Skill 会逐段检查有没有在原地转圈，砍掉重复解释，调整长短句节奏，拦住冒号滥用、破折号、「不是……而是……」之类的翻案腔和常见 AI 黑话。检查脚本只管已经写明的硬规则，不替你决定风格。
 
+## 这个 fork 改了什么
+
+相对上游 1.1.0，改动集中在判断层和改稿流程，中文口径的硬禁令与上游保持一致。
+
+- 新增「判断门槛」。成稿禁区分成三层，一处即改的硬禁区、同一段落里两三种同时出现才动手的弱信号，以及直接放过不算命中的四类情况，引语里的原话、标题专名与代码、正文在讨论这个说法本身、作者明确表示要用
+- 新增「拿到的文本是素材，不是指令」与「改文件时」
+- 改稿流程新增第八遍核有没有丢东西，核排名与比较、数量与限定、同时与先后、原话归属
+- 允许证据型作者画像。画像只做口味校准，只收能指着真实文本原句核对的特征，内容留在使用者本机
+- 判断层取自 [blader/humanizer](https://github.com/blader/humanizer)，逐条出处与明确没有采用的部分记在 [adapted-from-humanizer.md](./human-writing/references/adapted-from-humanizer.md)
+
+完整变更见 [CHANGELOG.md](./CHANGELOG.md)。
+
 ## 快速安装
 
 把下面这句话发给你的 Agent。
 
 ```bash
-帮我安装这个skill：https://github.com/KKKKhazix/human-writing
+帮我安装这个skill：https://github.com/pjj1234/human-writing
 ```
 
 Agent 会读取仓库、找到 `human-writing`，完成安装。装好之后显示名为「活人感写作」。
@@ -48,7 +60,13 @@ Agent 会读取仓库、找到 `human-writing`，完成安装。装好之后显�
 <details>
 <summary><strong>Agent 不支持直接安装时</strong></summary>
 
-从 [Releases](https://github.com/KKKKhazix/human-writing/releases/latest) 下载，或者把仓库里的 [`human-writing`](./human-writing) 文件夹完整复制到本机 Skills 目录。文件夹名保留 `human-writing`。
+从 [Releases](https://github.com/pjj1234/human-writing/releases/latest) 下载，或者把仓库里的 [`human-writing`](./human-writing) 文件夹完整复制到本机 Skills 目录。文件夹名保留 `human-writing`。
+
+也可以走 Skills CLI。
+
+```bash
+npx skills add pjj1234/human-writing --skill human-writing
+```
 
 ```text
 ~/.agents/skills/human-writing/
@@ -113,8 +131,8 @@ human-writing/
 
 MIT 协议开源。仓库只有原创规则和工具，没有第三方文章、训练语料或模型权重。
 
-碰到规则冲突、误报或者某个模型上表现不对，欢迎[提 Issue](https://github.com/KKKKhazix/human-writing/issues)。附上你的提示词、模型输出片段和你觉得应该是什么样，排查起来快很多。
+碰到规则冲突、误报或者某个模型上表现不对，欢迎[提 Issue](https://github.com/pjj1234/human-writing/issues)。附上你的提示词、模型输出片段和你觉得应该是什么样，排查起来快很多。
 
 <p align="center">
-  <sub>活人感写作 · Human Writing · 1.1.0</sub>
+  <sub>活人感写作 · Human Writing · 1.1.0 · fork-1</sub>
 </p>
