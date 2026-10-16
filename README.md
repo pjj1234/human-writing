@@ -3,7 +3,7 @@
 </p>
 
 <p align="center">
-  <a href="https://github.com/pjj1234/human-writing/releases/tag/fork-1"><img alt="Version 1.1.0 fork-1" src="https://img.shields.io/badge/version-1.1.0_fork--1-C4473A?style=flat-square"></a>
+  <a href="https://github.com/pjj1234/human-writing/releases/tag/fork-2"><img alt="Version 1.1.0 fork-2" src="https://img.shields.io/badge/version-1.1.0_fork--2-C4473A?style=flat-square"></a>
   <a href="./LICENSE"><img alt="MIT License" src="https://img.shields.io/badge/license-MIT-313131?style=flat-square"></a>
   <a href="https://github.com/pjj1234/human-writing/releases/latest"><img alt="GitHub Release" src="https://img.shields.io/github/v/release/pjj1234/human-writing?style=flat-square&color=6B6258"></a>
 </p>
@@ -17,7 +17,7 @@
 
 > AI 写中文有个通病：读完觉得挺流畅，但说不出是谁写的。活人感写作想治的就是这件事。
 
-让模型写出来的文章读起来像一个具体的人在说话——知道一些事，有判断，偶尔岔开一句，还能接回来。适用于知乎回答、公众号文章、博客、论坛帖、人物故事、科普、评测、小说、口播等大多数中文写作场景。
+让模型写出来的文章读起来像一个具体的人在说话——知道一些事，有判断，偶尔岔开一句，还能接回来。凡是要落成文字的中文写作都用：知乎回答、公众号文章、博客、论坛帖、人物故事、科普、评测、小说、口播。周报汇总、通知、邮件、表格、代码和公文格式件这类事务性文本不在此列。
 
 > **本仓库既是 fork，也是安装来源。** 上游是 [KKKKhazix/human-writing](https://github.com/KKKKhazix/human-writing)（作者数字生命卡兹克，MIT 许可）。本副本在上游 1.1.0 的基础上做了中文自用改造，安装和更新都直接走本仓库，不需要再回原仓库。改造内容见 [CHANGELOG.md](./CHANGELOG.md) 与 [`references/adapted-from-humanizer.md`](./human-writing/references/adapted-from-humanizer.md)。
 
@@ -134,5 +134,5 @@ MIT 协议开源。仓库只有原创规则和工具，没有第三方文章、�
 碰到规则冲突、误报或者某个模型上表现不对，欢迎[提 Issue](https://github.com/pjj1234/human-writing/issues)。附上你的提示词、模型输出片段和你觉得应该是什么样，排查起来快很多。
 
 <p align="center">
-  <sub>活人感写作 · Human Writing · 1.1.0 · fork-1</sub>
+  <sub>活人感写作 · Human Writing · 1.1.0 · fork-2</sub>
 </p>
