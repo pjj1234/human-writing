@@ -19,6 +19,8 @@
 
 让模型写出来的文章读起来像一个具体的人在说话——知道一些事，有判断，偶尔岔开一句，还能接回来。适用于知乎回答、公众号文章、博客、论坛帖、人物故事、科普、评测、小说、口播等大多数中文写作场景。
 
+> **这是个人 fork。** 上游是 [KKKKhazix/human-writing](https://github.com/KKKKhazix/human-writing)。本副本只做中文自用改造，改造内容见 [CHANGELOG.md](./CHANGELOG.md) 和 [`references/adapted-from-humanizer.md`](./human-writing/references/adapted-from-humanizer.md)。装上游请走原仓库。
+
 ## 它做什么
 
 写作之前先解决一个前置问题：你手上有没有东西可写。
@@ -87,7 +89,8 @@ human-writing/
 │   ├── reality.md
 │   ├── fiction.md
 │   ├── formats.md
-│   └── revision.md
+│   ├── revision.md
+│   └── adapted-from-humanizer.md
 └── scripts/
     └── check_prose.py
 ```
@@ -100,6 +103,7 @@ human-writing/
 | [`fiction.md`](./human-writing/references/fiction.md) | 小说、故事、虚构散文和对白的创作规则 |
 | [`formats.md`](./human-writing/references/formats.md) | 短内容、口播、演讲、教程、评测等特殊形式 |
 | [`revision.md`](./human-writing/references/revision.md) | 初稿写完之后怎么改——逐遍检查清单 |
+| [`adapted-from-humanizer.md`](./human-writing/references/adapted-from-humanizer.md) | 出处账本。哪些规则来自 blader/humanizer、怎么中文化、哪些没有采用 |
 | [`check_prose.py`](./human-writing/scripts/check_prose.py) | 检查成稿有没有踩到硬禁令 |
 | [`human-writing-lite.md`](./human-writing/dist/human-writing-lite.md) | 蒸馏版，两千字以内，聊天窗口直接粘贴用 |
 
